@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: myappspa
+  namespace: myapp
+  labels:
+    app: myappspa
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: "/"
+spec:
+  rules:
+    - host: YOURINGRESSIP.xip.io
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: myappspa
+              servicePort: 8080

@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: myapptodo
+  namespace: myapp
+  labels:
+    app: myapptodo
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: "/api/todo"
+spec:
+  rules:
+    - host: YOURINGRESSIP.xip.io
+      http:
+        paths:
+          - path: /api/todo
+            backend:
+              serviceName: myapptodo
+              servicePort: 8080
