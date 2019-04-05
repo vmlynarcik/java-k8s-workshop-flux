@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name: myapptodo
-          image: valdaakssec001.azurecr.io/myapptodo:v1
+          image: valdaakssec001.azurecr.io/myapptodo:cgc
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
