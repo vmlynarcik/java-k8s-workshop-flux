@@ -13,7 +13,7 @@ spec:
       containers:
         - name: myappspa
           image: YOURACRNAME.azurecr.io/myappspa:v1
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
           livenessProbe:
