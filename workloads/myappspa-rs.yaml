@@ -4,7 +4,7 @@ metadata:
   name: myappspa
   namespace: myapp
 spec:
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name: myappspa
-          image: valdaakssec001.azurecr.io/myappspa:cgc
+          image: YOURACRNAME.azurecr.io/myappspa:v1
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
