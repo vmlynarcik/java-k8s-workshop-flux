@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name: myappspa
-          image: YOURACRNAME.azurecr.io/myappspa:v1
+          image: vmlynarcik77.azurecr.io/myappspa:v1
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
